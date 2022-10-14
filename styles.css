@@ -544,7 +544,8 @@ iframe {
 }
 
 .video {
-    min-width: 50%;
-    max-width: 80%;
     aspect-ratio: 16 / 9;
+    min-width: 50%;
+    max-width: 80rem;
+    box-shadow: 0 0 4rem #0006;
 }
