@@ -30,7 +30,7 @@ d.addEventListener("DOMContentLoaded", e => {
     responsiveDesktop("responsive-js");
     responsiveTester("form-responsive-tester","btn-open-window","btn-close-window");
     userDevice("device");
-    useCamera("webcam");
+    useCamera("camera","webcam");
 })
 
 
