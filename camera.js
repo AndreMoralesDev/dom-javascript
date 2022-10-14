@@ -2,6 +2,7 @@ const d = document;
 const n = navigator;
 const useCamera = (camera,webcam)=> {
     const $webcam = d.getElementById(webcam);
+    const $camera = d.getElementById(camera);
     if (n.mediaDevices.getUserMedia){
         n.mediaDevices.getUserMedia({video: true, audio: false})
             .then(e => {
@@ -10,8 +11,7 @@ const useCamera = (camera,webcam)=> {
             })
             .catch(err => {
                 $webcam.insertAdjacentHTML("beforebegin", `<h2>${err}</h2>`)
-                camera.removeChild($webcam)
-                console.log(err)
+                $camera.removeChild($webcam)
             })
     } else {
         console.log("xd")
