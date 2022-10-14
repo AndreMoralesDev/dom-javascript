@@ -1,7 +1,8 @@
 const d = document;
 const n = navigator;
 
-const getGeolocation = ($geolocation) => {
+const getGeolocation = (geolocation) => {
+    const $geolocation = d.getElementById(geolocation);
     const options = {
         enableHighAccuracy: true,       //Máxima presición posible
         timeout: 5000,                          //Tiempo que se tomará en milisegundos
