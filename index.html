@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,700;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css">
+    <title>JavaScript - DOM</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1>JavaScript - DOM</h1>
+    </header>
+    <button class="nav-container" id="nav">
+        <ion-icon name="menu" class="menu-icon"></ion-icon>
+        <ion-icon name="close" class="close-icon icon-menu-off"></ion-icon>
+    </button>
+    <button class="nav-container scroll-up display-none" id="btn-scroll-up">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </button>
+    <button class="btn-dark-mode nav-container" id="btn-dark-mode">
+        <ion-icon name="moon" id="icon-dark"></ion-icon>
+        <ion-icon name="sunny" id="icon-light" class="display-none"></ion-icon>
+    </button>
+    <nav class="menu-options">
+        <a href="#reloj" id="option"><span>RELOJ</span></a>
+        <a href="#mini-game" id="option"><span>MINI-GAME</span></a>
+        <a href="#countdown" id="option"><span>CUENTA REGRESIVA</span></a>
+        <a href="#responsive-js" id="option"><span>RESPONSIVE JS</span></a>
+        <a href="#responsive-tester" id="option"><span>RESPONSIVE-TESTER</span></a>
+        <a href="#device" id="option"><span>DETECTAR DISPOSITIVO</span></a>
+        <a href="#camera" id="option"><span>ACTIVAR CÁMARA</span></a>
+    </nav>
+    <section class="section" id="reloj">
+        <h2>RELOJ</h2>
+        <article class="reloj">
+            <span class="reloj-time">00:00:00</span>
+        </article>
+        <div class="reloj-options">
+            <button id="btn-prender"><span>Prender</span></button>
+            <button id="btn-temporizador"><span>Temporizador</span></button>
+            <button id="btn-apagar" disabled><span>Apagar</span></button>
+        </div>
+        <div class="tiner-container display-none">
+            <article>
+                <div class="time-container">
+                    <p>H</p>
+                    <input type="tel" maxlength="2" id="H" value="00" autocomplete="off">
+                </div>
+                <div class="time-container">
+                    <p>M</p>
+                    <input type="tel" maxlength="2" id="M" value="00" autocomplete="off">
+                </div>
+                <div class="time-container">
+                    <p>S</p>
+                    <input type="tel" maxlength="2" id="S" value="00" autocomplete="off">
+                </div>
+            </article>
+            <div class="tiner-options">
+                <button id="btn-iniciar">Iniciar</button>
+                <button id="btn-cancelar">Cancelar</button>
+                <audio src="alarma.mp3" class="display-none" id="alarm"></audio>
+            </div>
+        </div>
+    </section>
+    <section class="section" id="mini-game">
+        <h2>MINI GAME</h2>
+        <article class="game-container" id="game-container">
+            <div class="game-ball" id="game-ball"></div>
+        </article>
+    </section>
+    <section class="section" id="countdown">
+        <h2>CUENTA REGRESIVA</h2>
+        <p class="countdown" id="countdown-time"></p>
+    </section>
+    <section class="section" id="responsive-js">
+    </section>
+    <section class="section" id="responsive-tester">
+        <h2>RESPONSIVE TESTER</h2>
+        <form method="POST" class="form-responsive-tester" autocomplete="off">
+            <input name="direction" type="text" placeholder="https://direccion.com">
+            <input name="height" type="text" placeholder="Alto">
+            <input name="width" type="text" placeholder="Ancho">
+            <input id="btn-open-window" type="submit" value="TESTEAR" class="btn-responsive-tester">
+            <button id="btn-close-window" class="btn-responsive-tester">Cerrar</button>
+        </form>
+    </section>
+    <section class="section" id="device">
+        <h2>DETECTAR DISPOSITIVO</h2>
+    </section>
+    <section class="section" id="camera">
+        <h2>DETECCIÓN DE CÁMARA</h2>
+        <video id="webcam" class="video"></video>
+    </section>
+    <div class="scroll-up"></div>
+    <script src="script.js" type="module"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
