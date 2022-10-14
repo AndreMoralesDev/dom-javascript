@@ -557,6 +557,13 @@ iframe {
 ///////////////////////////////////////////////////////////////////
 */
 
+#geolocation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10vh;
+}
 
 #geolocation:not(h2) {
     text-align: center;

@@ -11,10 +11,11 @@ const getGeolocation = (geolocation) => {
     const succes = position => {
         const coords = position.coords;
         $geolocation.innerHTML = `
+            <h2>GEOLOCALIZACIÓN</h2>
             <p>Latitud: ${coords.latitude}</p>
             <p>Longitud: ${coords.longitude}</p>
             <p>Presición: ${Math.round(coords.accuracy)} metros</p>
-            <a href="https://www.google.com/maps/@${coords.latitude},${coords.longitude}" target="_black" rel="noopener">Ir a Google Maps</a>
+            <a href="https://www.google.com/maps/@${coords.latitude},${coords.longitude},20z" target="_black" rel="noopener">Ir a Google Maps</a>
         `
         coords.latitude
         coords.longitude 
