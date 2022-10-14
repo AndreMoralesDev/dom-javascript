@@ -8,7 +8,7 @@ const getGeolocation = ($geolocation) => {
         maximunAge: 0                        //No considera la anterior ubicación obtenida
     };
     const succes = position => {
-        const coords = position.corrds;
+        const coords = position.coords;
         $geolocation.innerHTML = `
             <p>Latitud: ${coords.latitude}</p>
             <p>Longitud: ${coords.longitude}</p>
