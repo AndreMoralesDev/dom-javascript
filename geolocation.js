@@ -13,8 +13,8 @@ const getGeolocation = (geolocation) => {
         $geolocation.innerHTML = `
             <p>Latitud: ${coords.latitude}</p>
             <p>Longitud: ${coords.longitude}</p>
-            <p>Presición: ${coords.accuracy} metros</p>
-            <a href="https://www.google.com/maps/@${coords.latitude},${coords.longitude}" target="_black" rel="noopener"></a>
+            <p>Presición: ${Math.round(coords.accuracy)} metros</p>
+            <a href="https://www.google.com/maps/@${coords.latitude},${coords.longitude}" target="_black" rel="noopener">Ir a Google Maps</a>
         `
         coords.latitude
         coords.longitude 
