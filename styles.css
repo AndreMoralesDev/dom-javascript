@@ -549,3 +549,23 @@ iframe {
     box-shadow: 0 0 4rem #0006;
     padding: 1rem;
 }
+
+
+/*
+///////////////////////////////////////////////////////////////////
+                                    GEOLOCATION
+///////////////////////////////////////////////////////////////////
+*/
+
+
+#geolocation:not(h2) {
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: var(--font-normal);
+    color: var(--black);
+    text-decoration: none;
+}
+
+#geolocation a:visited {
+    color: var(--black);
+}

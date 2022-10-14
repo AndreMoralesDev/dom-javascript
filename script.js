@@ -32,7 +32,7 @@ d.addEventListener("DOMContentLoaded", e => {
     responsiveTester("form-responsive-tester","btn-open-window","btn-close-window");
     userDevice("device");
     // useCamera("camera","webcam");
-    getGeolocation();
+    getGeolocation("geolocation");
 })
 
 
