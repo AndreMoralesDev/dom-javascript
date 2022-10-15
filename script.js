@@ -8,6 +8,7 @@ import conection from "./conection.js";
 import useCamera from "./camera.js";
 import getGeolocation from "./geolocation.js";
 import searchFilters from "./searchFilters.js";
+import winnerRandom from "./winnerRandom.js";
 
 const d = document;
 const $menuOptions = d.querySelector(".menu-options");
@@ -32,9 +33,10 @@ d.addEventListener("DOMContentLoaded", e => {
     responsiveDesktop("responsive-js");
     responsiveTester("form-responsive-tester","btn-open-window","btn-close-window");
     userDevice("device");
-    // useCamera("camera","webcam");
+    useCamera("camera","webcam");
     getGeolocation("geolocation");
     searchFilters("filter-cards","card");
+    winnerRandom("btn-winner-random","winner-option");
 })
 
 

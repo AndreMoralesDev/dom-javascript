@@ -647,3 +647,46 @@ iframe {
     pointer-events: none;
     order: 1;
 }
+
+
+/*
+///////////////////////////////////////////////////////////////////
+                                    WINNER RANDOM
+///////////////////////////////////////////////////////////////////
+*/
+
+
+#winner-random {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;;
+}
+
+.winner-options {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.winner-option {
+    list-style-type: none;
+    font-size: calc(var(--font-normal) * 1.5);
+    color: var(--black);
+    text-align: center;
+}
+
+.btn-winner {
+    font-size: var(--font-normal);
+    color: var(--black);
+    cursor: pointer;
+    border: .2rem solid var(--black);
+    padding: var(--padding-normal);
+    padding-left: calc(var(--padding-normal) * 2);
+    padding-right: calc(var(--padding-normal) * 2);
+    font-weight: 600;
+}
+
+.btn-winner:hover {
+    background-color: var(--yellow);
+}
