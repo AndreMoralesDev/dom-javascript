@@ -32,6 +32,7 @@ html {
     --font-normal: calc(1.4rem + 0.15vw);
     --menu-opcion-size: clamp(4rem, 2.3rem + 2vw,5rem);
     --background: #fff;
+    --padding-normal: clamp(1rem, 0.8rem + 1vw, 1.5rem);
 }
 
 body {
@@ -557,6 +558,7 @@ iframe {
 ///////////////////////////////////////////////////////////////////
 */
 
+
 #geolocation {
     display: flex;
     justify-content: center;
@@ -575,4 +577,73 @@ iframe {
 
 #geolocation a:visited {
     color: var(--black);
+}
+
+
+/*
+///////////////////////////////////////////////////////////////////
+                                    SEARCH-FILTERS
+///////////////////////////////////////////////////////////////////
+*/
+
+
+#search-filters {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7vh;
+}
+
+.filter-cards {
+    width: clamp(15rem, 8rem + 10vw, 30rem);
+    font-size: var(--font-normal);
+    color: var(--black);
+    background-color: transparent;
+    padding: calc(var(--padding-normal) / 2);
+    outline: none;
+    border: none;
+    border-bottom: .2rem solid var(--black);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: mediumvioletred;
+    cursor: pointer;
+    border: .1rem solid var(--black);
+}
+
+.card:hover {
+    box-shadow: 0 0 3rem #0006;;
+}
+
+.card:hover img {
+    filter: contrast(1.2);
+}
+
+.card h3 {
+    font-size: var(--font-normal);
+    color: #fff;
+    padding: var(--padding-normal);
+}
+
+.card img {
+    object-fit: cover;
+    flex-grow: 1;
+    filter: grayscale(1);
+}
+
+.no-filter {
+    visibility: hidden;
+    pointer-events: none;
+    order: 1;
 }

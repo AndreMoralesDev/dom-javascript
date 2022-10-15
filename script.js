@@ -7,6 +7,7 @@ import userDevice from "./userDevice.js";
 import conection from "./conection.js";
 import useCamera from "./camera.js";
 import getGeolocation from "./geolocation.js";
+import searchFilters from "./searchFilters.js";
 
 const d = document;
 const $menuOptions = d.querySelector(".menu-options");
@@ -33,6 +34,7 @@ d.addEventListener("DOMContentLoaded", e => {
     userDevice("device");
     // useCamera("camera","webcam");
     getGeolocation("geolocation");
+    searchFilters("filter-cards","card");
 })
 
 
