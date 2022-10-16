@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,700;1,500&display=swap"
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>JavaScript - DOM</title>
 </head>
@@ -39,6 +40,7 @@
         <a href="#geolocation" id="option"><span>UBICACIÓN</span></a>
         <a href="#search-filters" id="option"><span>FILTROS DE BUSQUEDA</span></a>
         <a href="#winner-random" id="option"><span>GANADOR AL AZAR</span></a>
+        <a href="#responsive-slider" id="option"><span>RESPONSIVE SLIDER</span></a>
     </nav>
     <section class="section" id="reloj">
         <h2>RELOJ</h2>
@@ -106,7 +108,7 @@
     </section>
     <section class="section" id="search-filters">
         <h2>FILTROS DE BÚSQUEDA</h2>
-        <input type="search" id="filter-cards" class="filter-cards" placeholder="Buscar...">
+        <input type="text" id="filter-cards" class="filter-cards" placeholder="Buscar...">
         <article class="cards">
             <div class="card">
                 <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg" alt="atardecer rojo">
@@ -154,7 +156,94 @@
         </ul>
         <buttom id="btn-winner-random" class="btn-winner">Ganador</buttom>
     </section>
+    <section class="section" id="responsive-slider">
+        <h2>RESPONSIVE SLIDER</h2>
+        <section class="slides-container">
+            <div class="responsive-arrows">
+                <button id="btn-before" class="btn-before">
+                    <ion-icon name="caret-back-outline"></ion-icon>
+                </button>
+                <button id="btn-after" class="btn-after">
+                    <ion-icon name="caret-forward-outline"></ion-icon>
+                </button>
+            </div>
+            <div class="slides" id="slides">
+                <article class="slide">
+                    <div class="content">
+                        <div class="img">
+                            <img src="https://dtodito.com.pe/wp-content/uploads/2020/12/28.png"
+                                alt="Botella de Coca Cola">
+                        </div>
+                        <p>Coca Cola</p>
+                        <p lass="slide-price">S/7.00</p>
+                    </div>
+                </article>
+                <article class="slide">
+                    <div class="content">
+                        <div class="img">
+                            <img src="https://mmkfoods.pe/wp-content/uploads/2020/09/lays-natural-540x540.png"
+                                alt="Papitas Lays">
+                        </div>
+                        <p>Papitas Lays</p>
+                        <p class="slide-price">S/9.00</p>
+                    </div>
+                </article>
+                <article class="slide">
+                    <div class="content">
+                        <div class="img">
+                            <img src="https://omxfire.com/wp-content/uploads/2022/01/Extintor-10-lbs-pqs.png"
+                                alt="Extintor">
+                        </div>
+                        <p>Extintor</p>
+                        <p class="slide-price">S/120.00</p>
+                    </div>
+                </article>
+                <article class="slide">
+                    <div class="content">
+                        <div class="img">
+                            <img src="https://www.pelikan.com/images/PelikanMX/Productos/ColorearyPintar/LapicesdeColores/Ourline/30330327_Colores_Pastel_12.png"
+                                alt="Caja de colores">
+                        </div>
+                        <p>Colores</p>
+                        <p class="slide-price">S/20.00</p>
+                    </div>
+                </article>
+                <article class="slide">
+                    <div class="content">
+                        <div class="img">
+                            <img src="https://dtodito.com.pe/wp-content/uploads/2020/12/28.png"
+                                alt="Botella de Coca Cola">
+                        </div>
+                        <p>Coca Cola</p>
+                        <p class="slide-price">S/7.00</p>
+                    </div>
+                </article>
+                <article class="slide">
+                    <div class="content">
+                        <div class="img">
+                            <img src="https://mmkfoods.pe/wp-content/uploads/2020/09/lays-natural-540x540.png"
+                                alt="Papitas Lays">
+                        </div>
+                        <p>Papitas Lays</p>
+                        <p class="slide-price">S/9.00</p>
+                    </div>
+                </article>
+                <article class="slide">
+                    <div class="content">
+                        <div class="img">
+                            <img src="https://omxfire.com/wp-content/uploads/2022/01/Extintor-10-lbs-pqs.png"
+                                alt="Extintor">
+                        </div>
+                        <p>Extintor</p>
+                        <p class="slide-price">S/120.00</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <div role="tablist" class="slides-dots"></div>
+    </section>
     <div class="scroll-up"></div>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
     <script src="script.js" type="module"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

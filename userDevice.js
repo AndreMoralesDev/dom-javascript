@@ -33,7 +33,7 @@ const userDevice = (container) => {
              browserElement = d.createElement("div"),
              userAgent = d.createElement("div");
     
-    deviceElement.textContent = `Dispositivo: ${isDesktop.any()}`;
+    deviceElement.textContent = `SO: ${isMobile.any() || isDesktop.any()}`;
     detailsContainer.appendChild(deviceElement)
     deviceElement.classList.add("device-details")
     

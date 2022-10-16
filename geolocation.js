@@ -22,7 +22,7 @@ const getGeolocation = (geolocation) => {
     }
     const error = err => {
         const $h2 = d.createElement("h2")
-        $h2.textContent = `Error: Cámara no disponible`
+        $h2.textContent = `Error: Ubicación no disponible`
         $geolocation.appendChild($h2)
     }
     n.geolocation.getCurrentPosition(succes, error, options);

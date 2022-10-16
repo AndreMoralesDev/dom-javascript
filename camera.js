@@ -10,7 +10,7 @@ const useCamera = (camera,webcam)=> {
                 $webcam.play();
             })
             .catch(err => {
-                $webcam.insertAdjacentHTML("beforebegin", `<h2>${err}</h2>`)
+                $webcam.insertAdjacentHTML("beforebegin", `<h2>Cámara no disponible</h2>`)
                 $camera.removeChild($webcam)
             })
     } else {

@@ -9,6 +9,7 @@ import useCamera from "./camera.js";
 import getGeolocation from "./geolocation.js";
 import searchFilters from "./searchFilters.js";
 import winnerRandom from "./winnerRandom.js";
+import responsiveSlider from "./responsiveSlider.js";
 
 const d = document;
 const $menuOptions = d.querySelector(".menu-options");
@@ -37,6 +38,7 @@ d.addEventListener("DOMContentLoaded", e => {
     getGeolocation("geolocation");
     searchFilters("filter-cards","card");
     winnerRandom("btn-winner-random","winner-option");
+    responsiveSlider();
 })
 
 
