@@ -30,17 +30,20 @@
         <ion-icon name="sunny" id="icon-light" class="display-none"></ion-icon>
     </button>
     <nav class="menu-options">
-        <a href="#reloj" id="option"><span>RELOJ</span></a>
-        <a href="#mini-game" id="option"><span>MINI GAME</span></a>
-        <a href="#countdown" id="option"><span>CUENTA REGRESIVA</span></a>
-        <a href="#responsive-js" id="option"><span>RESPONSIVE JS</span></a>
-        <a href="#responsive-tester" id="option"><span>RESPONSIVE TESTER</span></a>
-        <a href="#device" id="option"><span>DETECTAR DISPOSITIVO</span></a>
-        <a href="#camera" id="option"><span>ACTIVAR CÁMARA</span></a>
-        <a href="#geolocation" id="option"><span>UBICACIÓN</span></a>
-        <a href="#search-filters" id="option"><span>FILTROS DE BUSQUEDA</span></a>
-        <a href="#winner-random" id="option"><span>GANADOR AL AZAR</span></a>
-        <a href="#responsive-slider" id="option"><span>RESPONSIVE SLIDER</span></a>
+        <a href="#reloj"><span>RELOJ</span></a>
+        <a href="#mini-game"><span>MINI GAME</span></a>
+        <a href="#countdown"><span>CUENTA REGRESIVA</span></a>
+        <a href="#responsive-js"><span>RESPONSIVE JS</span></a>
+        <a href="#responsive-tester"><span>RESPONSIVE TESTER</span></a>
+        <a href="#device"><span>DETECTAR DISPOSITIVO</span></a>
+        <a href="#camera"><span>ACTIVAR CÁMARA</span></a>
+        <a href="#geolocation"><span>UBICACIÓN</span></a>
+        <a href="#search-filters"><span>FILTROS DE BUSQUEDA</span></a>
+        <a href="#winner-random"><span>GANADOR AL AZAR</span></a>
+        <a href="#responsive-slider"><span>RESPONSIVE SLIDER</span></a>
+        <a href="#smart-video"><span>SMART VIDEO</span></a>
+        <a href="#contact-form"><span>FORMULARIO</span></a>
+        <a href="#speech"><span>NARRADOR</span></a>
     </nav>
     <section class="section" id="reloj">
         <h2>RELOJ</h2>
@@ -70,7 +73,7 @@
             <div class="tiner-options">
                 <button id="btn-iniciar">Iniciar</button>
                 <button id="btn-cancelar">Cancelar</button>
-                <audio src="alarma.mp3" class="display-none" id="alarm"></audio>
+                <audio src="media/alarma.mp3" class="display-none" id="alarm"></audio>
             </div>
         </div>
     </section>
@@ -82,7 +85,9 @@
     </section>
     <section class="section" id="countdown">
         <h2>CUENTA REGRESIVA</h2>
+        <input type="date" id="countdown-calendar" class="countdown-calendar">
         <p class="countdown" id="countdown-time"></p>
+        <button id="countdown-btn" class="countdown-btn">Agendar</button>
     </section>
     <section class="section" id="responsive-js">
     </section>
@@ -242,11 +247,62 @@
         </section>
         <div role="tablist" class="slides-dots"></div>
     </section>
-    <div class="scroll-up"></div>
-    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
-    <script src="script.js" type="module"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <section class="section" id="smart-video">
+        <h2>SMART VIDEO</h2>
+        <video src="media/video1.mp4" controls muted loop data-video></video>
+        <video src="media/video2.mp4" controls muted loop data-video></video>
+        <video src="media/video3.mp4" controls muted loop data-video></video>
+        <div class="scroll-up"></div>
+        <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+        <script src="script.js" type="module"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </section>
+    <section class="section" id="contact-form">
+        <h2>FORMULARIO DE CONTACTO</h2>
+        <article class="contact-form-container">
+            <h3>¡Contáctame!</h3>
+            <form id="form" class="form" autocomplete="off">
+                <div class="form-input-container">
+                    <input type="text" name="name" title="Solo se aceptan caracteres" required placeholder="Nombre">
+                    <i class="border"></i>
+                </div>
+                <div class="form-input-container">
+                    <input type="email" name="email" title="Correo inválido" required placeholder="Email">
+                    <i class="border"></i>
+                </div>
+                <div class="form-input-container">
+                    <input type="text" name="subject"
+                        title="El asunto es requerido y no debe tener más de 255 caracteres" required
+                        placeholder="Asunto a tratar">
+                    <i class="border"></i>
+                </div>
+                <div class="form-input-container">
+                    <textarea class="form-textarea" name="comments" placeholder="Escribe tus comentarios"
+                        title="Los comentarios no pueden tener más de 255 caracteres"></textarea>
+                    <i class="border"></i>
+                </div>
+                <input type="submit" value="ENVIAR">
+            </form>
+            <div class="loader-container">
+                <span class="loader"></span>
+                <p class="loader-text">Cargando</p>
+            </div>
+            <div class="contact-form-response">
+                <p></p>
+            </div>
+        </article>
+    </section>
+    <section class="section" id="speech">
+        <h2>NARRADOR</h2>
+        <div class="speech-container">
+            <select class="speech-select">
+                <option value="">Elige una voz</option>
+            </select>
+            <textarea class="speech-text" placeholder="Texto de narración..."></textarea>
+            <button id="speech-btn" class="speech-btn">Leer texto</button>
+        </div>
+    </section>
 </body>
 
 </html>
